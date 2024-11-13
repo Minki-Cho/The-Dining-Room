@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{9bde664c-4ce3-49c4-98c4-98db83ac4d1b}</ProjectGuid>
+    <RootNamespace>Project</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\prop-pages\opengl-sdl2-glew-stb-imgui.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\prop-pages\opengl-sdl2-glew-stb-imgui.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(Solutiondir)external\FMOD\core\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(Solutiondir)external\FMOD\core\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(Solutiondir)external\FMOD\core\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(Solutiondir)external\FMOD\core\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);SFML_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "$(SolutionDir)external\bin\*.dll" "$(TargetDir)"
+xcopy /y /d "$(SolutionDir)external\bin\*.dll" "$(SolutiontDir)external\SFML\x64\bin"
+xcopy /y /d /e /i "$(SolutionDir)assets\" "$(TargetDir)assets\"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>xcopy "$(SolutionDir)external\FMOD\core\lib\x64\fmod.dll" "$(TargetDir)" /Y
+xcopy /y /d /e /i "$(SolutionDir)assets\" "$(TargetDir)assets\"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);SFML_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "$(SolutionDir)external\bin\*.dll" "$(TargetDir)"
+xcopy /y /d "$(SolutionDir)external\bin\*.dll" "$(SolutiontDir)external\SFML\x64\bin"
+xcopy /y /d /e /i "$(SolutionDir)assets\" "$(TargetDir)assets\"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>xcopy "$(SolutionDir)external\FMOD\core\lib\x64\fmod.dll" "$(TargetDir)" /Y
+xcopy /y /d /e /i "$(SolutionDir)assets\" "$(TargetDir)assets\"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common_gl\common_gl.vcxproj">
+      <Project>{6aacd4fc-c3ed-4a93-ae7f-93d098b61e29}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Animation.h" />
+    <ClInclude Include="Engine\Button.h" />
+    <ClInclude Include="Engine\Collision.h" />
+    <ClInclude Include="Engine\Component.h" />
+    <ClInclude Include="Engine\ComponentManager.h" />
+    <ClInclude Include="Engine\Engine.h" />
+    <ClInclude Include="Engine\fmod-sound.h" />
+    <ClInclude Include="Engine\GameObject.h" />
+    <ClInclude Include="Engine\GameObjectManager.h" />
+    <ClInclude Include="Engine\GameState.h" />
+    <ClInclude Include="Engine\GameStateManager.h" />
+    <ClInclude Include="Engine\Input.h" />
+    <ClInclude Include="Engine\Logger.h" />
+    <ClInclude Include="Engine\ParticleEmitter.h" />
+    <ClInclude Include="Engine\Rect.h" />
+    <ClInclude Include="Engine\ShowCollision.h" />
+    <ClInclude Include="Engine\Sprite.h" />
+    <ClInclude Include="Engine\Texture.h" />
+    <ClInclude Include="Engine\TextureManager.h" />
+    <ClInclude Include="Engine\Window.h" />
+    <ClInclude Include="Game\BadEnding.h" />
+    <ClInclude Include="Game\CharacterAnim.h" />
+    <ClInclude Include="Game\CleanUp.h" />
+    <ClInclude Include="Game\Counter.h" />
+    <ClInclude Include="Game\Credit.h" />
+    <ClInclude Include="Game\DayByDay.h" />
+    <ClInclude Include="Game\Days.h" />
+    <ClInclude Include="Game\Diary.h" />
+    <ClInclude Include="Game\Direction.h" />
+    <ClInclude Include="Game\Double_Event.h" />
+    <ClInclude Include="Game\Drinks.h" />
+    <ClInclude Include="Game\Food.h" />
+    <ClInclude Include="Game\FoodBubble.h" />
+    <ClInclude Include="Game\FoodType.h" />
+    <ClInclude Include="Game\Fryer.h" />
+    <ClInclude Include="Game\GameObjectTypes.h" />
+    <ClInclude Include="Game\GameParticles.h" />
+    <ClInclude Include="Game\GameScreen.h" />
+    <ClInclude Include="Game\GoodEnding.h" />
+    <ClInclude Include="Game\Guest.h" />
+    <ClInclude Include="Game\GuestType.h" />
+    <ClInclude Include="Game\Guest_Anims.h" />
+    <ClInclude Include="Game\HighLight.h" />
+    <ClInclude Include="Game\HowToPlay.h" />
+    <ClInclude Include="Game\Icecream.h" />
+    <ClInclude Include="Game\InfiniteMode.h" />
+    <ClInclude Include="Game\ingredient.h" />
+    <ClInclude Include="Game\Kitchen.h" />
+    <ClInclude Include="Game\Loading.h" />
+    <ClInclude Include="Game\MainMenu.h" />
+    <ClInclude Include="Game\Market.h" />
+    <ClInclude Include="Game\ModeSelect.h" />
+    <ClInclude Include="Game\SideMenu.h" />
+    <ClInclude Include="Game\Skill.h" />
+    <ClInclude Include="Game\StoryMode.h" />
+    <ClInclude Include="Game\Money.h" />
+    <ClInclude Include="Game\NoguestEnding.h" />
+    <ClInclude Include="Game\NormalWorkBench.h" />
+    <ClInclude Include="Game\Number.h" />
+    <ClInclude Include="Game\Pause.h" />
+    <ClInclude Include="Game\PickUpWorkBench.h" />
+    <ClInclude Include="Game\Player.h" />
+    <ClInclude Include="Game\Player_Anims.h" />
+    <ClInclude Include="Game\Reputation.h" />
+    <ClInclude Include="Game\Result.h" />
+    <ClInclude Include="Game\Screens.h" />
+    <ClInclude Include="Game\Settings.h" />
+    <ClInclude Include="Game\Sound_lists.h" />
+    <ClInclude Include="Game\Splash.h" />
+    <ClInclude Include="Game\StoreTakenEnding.h" />
+    <ClInclude Include="Game\Table.h" />
+    <ClInclude Include="Game\Theif_Anims.h" />
+    <ClInclude Include="Game\Thief.h" />
+    <ClInclude Include="Game\Timer.h" />
+    <ClInclude Include="Game\Timer2.h" />
+    <ClInclude Include="Game\TrashCan.h" />
+    <ClInclude Include="Game\Unlock.h" />
+    <ClInclude Include="Game\VolumNumber.h" />
+    <ClInclude Include="Game\Wall.h" />
+    <ClInclude Include="Game\WorkBench.h" />
+    <ClInclude Include="Game\WorkBenchRange.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine\Animation.cpp" />
+    <ClCompile Include="Engine\Button.cpp" />
+    <ClCompile Include="Engine\Collision.cpp" />
+    <ClCompile Include="Engine\Engine.cpp" />
+    <ClCompile Include="Engine\fmod-sound.cpp" />
+    <ClCompile Include="Engine\GameObject.cpp" />
+    <ClCompile Include="Engine\GameObjectManager.cpp" />
+    <ClCompile Include="Engine\GameStateManager.cpp" />
+    <ClCompile Include="Engine\Input.cpp" />
+    <ClCompile Include="Engine\Logger.cpp" />
+    <ClCompile Include="Engine\ParticleEmitter.cpp" />
+    <ClCompile Include="Engine\ShowCollision.cpp" />
+    <ClCompile Include="Engine\Sprite.cpp" />
+    <ClCompile Include="Engine\Texture.cpp" />
+    <ClCompile Include="Engine\TextureManager.cpp" />
+    <ClCompile Include="Engine\Window.cpp" />
+    <ClCompile Include="Game\CleanUp.cpp" />
+    <ClCompile Include="Game\Counter.cpp" />
+    <ClCompile Include="Game\Credit.cpp" />
+    <ClCompile Include="Game\DayByDay.cpp" />
+    <ClCompile Include="Game\Days.cpp" />
+    <ClCompile Include="Game\BadEnding.cpp" />
+    <ClCompile Include="Game\Diary.cpp" />
+    <ClCompile Include="Game\Double_Event.cpp" />
+    <ClCompile Include="Game\Drinks.cpp" />
+    <ClCompile Include="Game\Food.cpp" />
+    <ClCompile Include="Game\FoodBubble.cpp" />
+    <ClCompile Include="Game\Fryer.cpp" />
+    <ClCompile Include="Game\GameParticles.cpp" />
+    <ClCompile Include="Game\GameScreen.cpp" />
+    <ClCompile Include="Game\GoodEnding.cpp" />
+    <ClCompile Include="Game\Guest.cpp" />
+    <ClCompile Include="Game\HighLight.cpp" />
+    <ClCompile Include="Game\HowToPlay.cpp" />
+    <ClCompile Include="Game\Icecream.cpp" />
+    <ClCompile Include="Game\InfiniteMode.cpp" />
+    <ClCompile Include="Game\ingredient.cpp" />
+    <ClCompile Include="Game\Kitchen.cpp" />
+    <ClCompile Include="Game\Loading.cpp" />
+    <ClCompile Include="Game\MainMenu.cpp" />
+    <ClCompile Include="Game\Market.cpp" />
+    <ClCompile Include="Game\ModeSelect.cpp" />
+    <ClCompile Include="Game\SideMenu.cpp" />
+    <ClCompile Include="Game\Skill.cpp" />
+    <ClCompile Include="Game\StoryMode.cpp" />
+    <ClCompile Include="Game\Money.cpp" />
+    <ClCompile Include="Game\NoGuestEnding.cpp" />
+    <ClCompile Include="Game\NormalWorkBench.cpp" />
+    <ClCompile Include="Game\Number.cpp" />
+    <ClCompile Include="Game\Pause.cpp" />
+    <ClCompile Include="Game\PickUpWorkBench.cpp" />
+    <ClCompile Include="Game\Player.cpp" />
+    <ClCompile Include="Game\Reputation.cpp" />
+    <ClCompile Include="Game\Result.cpp" />
+    <ClCompile Include="Game\Settings.cpp" />
+    <ClCompile Include="Game\Splash.cpp" />
+    <ClCompile Include="Game\StoreTakenEnding.cpp" />
+    <ClCompile Include="Game\Table.cpp" />
+    <ClCompile Include="Game\Thief.cpp" />
+    <ClCompile Include="Game\Timer.cpp" />
+    <ClCompile Include="Game\Timer2.cpp" />
+    <ClCompile Include="Game\TrashCan.cpp" />
+    <ClCompile Include="Game\Unlock.cpp" />
+    <ClCompile Include="Game\VolumNumber.cpp" />
+    <ClCompile Include="Game\Wall.cpp" />
+    <ClCompile Include="Game\WorkBenchRange.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="WindowMain.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

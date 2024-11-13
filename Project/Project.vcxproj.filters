@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{7c2a30e5-e452-4313-9f36-9a7dac393362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{993ee4fa-f699-4fd1-b505-f9350bc14d0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Headers">
+      <UniqueIdentifier>{4b014cff-d613-4fb6-ae4c-04ad93eb25d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Codes">
+      <UniqueIdentifier>{6666f1ab-0822-4c98-8f4d-4685882d0abb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Headers">
+      <UniqueIdentifier>{b50062f7-bc38-4c12-8af5-a85f3e0fcd0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Codes">
+      <UniqueIdentifier>{39d18b2c-ea13-4e69-a2d1-6ce1c5c62f3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Codes\GameObjects">
+      <UniqueIdentifier>{bfdd7bb1-0370-4c28-8b51-edd32ec44d9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Codes\Components">
+      <UniqueIdentifier>{d0735890-6646-4fbe-a3e5-d7336114dd13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Headers\Components">
+      <UniqueIdentifier>{e0927f61-df37-40d6-9152-0d62b3211a98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Headers\GameObjects">
+      <UniqueIdentifier>{77767409-331f-4356-b3eb-42ce0bce1280}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Codes\GameStates">
+      <UniqueIdentifier>{9de5c0e6-b265-414a-9178-1567ab9345fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Headers\GameStates">
+      <UniqueIdentifier>{1320f15c-1938-4b59-a61e-2ada49883bc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Codes\WorkBench">
+      <UniqueIdentifier>{2fa80190-da4c-4810-8d24-0c0138f63f98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Headers\WorkBench">
+      <UniqueIdentifier>{07f96008-66e8-438d-9b58-cbf2d190ae3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Headers\EnumClasses">
+      <UniqueIdentifier>{59ac1059-0df8-43c8-ae5c-47fef7649e03}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Animation.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Button.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Collision.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Component.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ComponentManager.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Engine.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\fmod-sound.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameObject.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameObjectManager.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameState.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameStateManager.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Input.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Logger.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ParticleEmitter.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Rect.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ShowCollision.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Sprite.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Texture.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\TextureManager.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Window.h">
+      <Filter>Engine\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\GameParticles.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Unlock.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Timer.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Number.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Pause.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Days.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Kitchen.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\HighLight.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\DayByDay.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\FoodBubble.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Result.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Money.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Reputation.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Settings.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\WorkBenchRange.h">
+      <Filter>Game\Headers\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Wall.h">
+      <Filter>Game\Headers\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\GameScreen.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Food.h">
+      <Filter>Game\Headers\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Guest.h">
+      <Filter>Game\Headers\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Player.h">
+      <Filter>Game\Headers\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\BadEnding.h">
+      <Filter>Game\Headers\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Credit.h">
+      <Filter>Game\Headers\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\GoodEnding.h">
+      <Filter>Game\Headers\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\NoguestEnding.h">
+      <Filter>Game\Headers\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\StoreTakenEnding.h">
+      <Filter>Game\Headers\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\HowToPlay.h">
+      <Filter>Game\Headers\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MainMenu.h">
+      <Filter>Game\Headers\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Splash.h">
+      <Filter>Game\Headers\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\StoryMode.h">
+      <Filter>Game\Headers\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Counter.h">
+      <Filter>Game\Headers\WorkBench</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\NormalWorkBench.h">
+      <Filter>Game\Headers\WorkBench</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PickUpWorkBench.h">
+      <Filter>Game\Headers\WorkBench</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\TrashCan.h">
+      <Filter>Game\Headers\WorkBench</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\CharacterAnim.h">
+      <Filter>Game\Headers\EnumClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Direction.h">
+      <Filter>Game\Headers\EnumClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\FoodType.h">
+      <Filter>Game\Headers\EnumClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\GameObjectTypes.h">
+      <Filter>Game\Headers\EnumClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Guest_Anims.h">
+      <Filter>Game\Headers\EnumClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\GuestType.h">
+      <Filter>Game\Headers\EnumClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Player_Anims.h">
+      <Filter>Game\Headers\EnumClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Sound_lists.h">
+      <Filter>Game\Headers\EnumClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Table.h">
+      <Filter>Game\Headers\WorkBench</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Screens.h">
+      <Filter>Game\Headers\EnumClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\VolumNumber.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Drinks.h">
+      <Filter>Game\Headers\WorkBench</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\WorkBench.h">
+      <Filter>Game\Headers\WorkBench</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Diary.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\InfiniteMode.h">
+      <Filter>Game\Headers\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\CleanUp.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Market.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\ModeSelect.h">
+      <Filter>Game\Headers\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Fryer.h">
+      <Filter>Game\Headers\WorkBench</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Loading.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Double_Event.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Thief.h">
+      <Filter>Game\Headers\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Theif_Anims.h">
+      <Filter>Game\Headers\EnumClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Skill.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\SideMenu.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\ingredient.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Icecream.h">
+      <Filter>Game\Headers\WorkBench</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Timer2.h">
+      <Filter>Game\Headers\Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine\Animation.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Button.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Collision.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Engine.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\fmod-sound.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameObject.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameObjectManager.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameStateManager.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Input.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Logger.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ParticleEmitter.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ShowCollision.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Sprite.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Texture.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\TextureManager.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Window.cpp">
+      <Filter>Engine\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\GameParticles.cpp">
+      <Filter>Game\Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="WindowMain.cpp" />
+    <ClCompile Include="Game\DayByDay.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Days.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\FoodBubble.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\GameScreen.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\HighLight.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Kitchen.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Money.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Unlock.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Timer.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Result.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Pause.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Number.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Food.cpp">
+      <Filter>Game\Codes\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Guest.cpp">
+      <Filter>Game\Codes\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Player.cpp">
+      <Filter>Game\Codes\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Settings.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Wall.cpp">
+      <Filter>Game\Codes\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Reputation.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\BadEnding.cpp">
+      <Filter>Game\Codes\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\GoodEnding.cpp">
+      <Filter>Game\Codes\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\HowToPlay.cpp">
+      <Filter>Game\Codes\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MainMenu.cpp">
+      <Filter>Game\Codes\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\StoryMode.cpp">
+      <Filter>Game\Codes\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\WorkBenchRange.cpp">
+      <Filter>Game\Codes\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Splash.cpp">
+      <Filter>Game\Codes\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\NoGuestEnding.cpp">
+      <Filter>Game\Codes\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Counter.cpp">
+      <Filter>Game\Codes\WorkBench</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PickUpWorkBench.cpp">
+      <Filter>Game\Codes\WorkBench</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Table.cpp">
+      <Filter>Game\Codes\WorkBench</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Credit.cpp">
+      <Filter>Game\Codes\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\VolumNumber.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\CleanUp.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\StoreTakenEnding.cpp">
+      <Filter>Game\Codes\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Drinks.cpp">
+      <Filter>Game\Codes\WorkBench</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\TrashCan.cpp">
+      <Filter>Game\Codes\WorkBench</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\NormalWorkBench.cpp">
+      <Filter>Game\Codes\WorkBench</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Diary.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\InfiniteMode.cpp">
+      <Filter>Game\Codes\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Market.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\ModeSelect.cpp">
+      <Filter>Game\Codes\GameStates</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Fryer.cpp">
+      <Filter>Game\Codes\WorkBench</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Loading.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Double_Event.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Thief.cpp">
+      <Filter>Game\Codes\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\ingredient.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Skill.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\SideMenu.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Icecream.cpp">
+      <Filter>Game\Codes\WorkBench</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Timer2.cpp">
+      <Filter>Game\Codes\Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
